@@ -1,33 +1,66 @@
-## About this template
+Hepsiburada Test Automation Project
 
-This is a template to get started with a Gauge project that uses Selenium as the driver to interact with a web browser.
+Bu proje, Hepsiburada web sitesi için geliştirilmiş bir test otomasyon projesidir.  
+Testler Gauge framework kullanılarak BDD yaklaşımıyla yazılmış, Java ve Selenium WebDriver ile otomatikleştirilmiştir.
 
-## Installing this template
+Kullanılan Teknolojiler
 
-    gauge --install java_maven_selenium
+Java 11  
+Selenium WebDriver  
+Gauge  
+Maven  
+IntelliJ IDEA  
 
-## Building on top of this template
+Proje Yaklaşımı
 
-### Defining Specifications
+Test senaryoları Gauge `.spec` dosyalarında, okunabilir ve sade bir dille yazılmıştır.
 
-* This template includes a sample specification which opens up a browser and navigates to `Get Started` page of Gauge.
-* Add more specifications on top of sample specification.
+Element locator bilgileri ve test verileri koddan ayrılarak JSON dosyalarında tutulmuştur.
+- Element locator'ları: `allpage.json`
+- Test verileri: `values.json`
 
-Read more about [Specifications](http://getgauge.io/documentation/user/current/specifications/README.html)
+Page Object Model mantığına uygun, modüler ve sürdürülebilir bir yapı kullanılmıştır.
 
-### Writing the implementations
+Sabit beklemeler yerine element bazlı dinamik bekleme mekanizmaları tercih edilmiştir.
 
-This is where the java implementation of the steps would be implemented. Since this is a Selenium based project, the java implementation would invoke Selenium APIs as required.
+Her test temiz ve izole bir tarayıcı oturumunda (Incognito / InPrivate) başlatılır.
 
-_We recommend considering modelling your tests using the [Page Object](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) pattern, and the [Webdriver support](https://github.com/SeleniumHQ/selenium/wiki/PageFactory) for creating them._
+Desteklenen Tarayıcılar
 
-- Note that every Gauge step implementation is annotated with a `Step` attribute that takes the Step text pattern as a parameter.
-Read more about [Step implementations in Java](http://getgauge.io/documentation/user/current/test_code/java/java.html)
+Chrome (varsayılan)  
+Edge  
 
-### Execution
+Tarayıcı seçimi ortam değişkeni üzerinden yapılabilir.
 
-* You can execute the specification as:
+Kurulum
 
-```
-mvn test
-```
+Gereksinimler:
+- Java JDK 11 veya üzeri
+- Maven
+- Gauge CLI
+
+Bağımlılıkları yüklemek için proje dizininde aşağıdaki komut çalıştırılır:
+'''bash
+mvn clean install
+
+Tüm testleri çalıştırmak için:
+mvn gauge:execute
+
+Otomasyon Kapsamı:
+Ürün arama
+Ürün listeleme kontrolleri
+Ürün detay sayfası
+Sepete ürün ekleme
+Liste ve grid görünüm kontrolleri
+Smoke test senaryoları
+
+PROJE YAPISI:
+
+├─ specs/                     → Gauge senaryoları (.spec)
+├─ src/test/java/             → Step ve core sınıflar
+├─ src/test/resources/
+│  ├─ data/                   → Test verileri (values.json)
+│  └─ element-infos/          → Locator dosyaları (allpage.json)
+├─ env/                       → Ortam konfigürasyonları
+├─ pom.xml
+└─ README.md
