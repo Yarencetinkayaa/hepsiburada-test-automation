@@ -1,0 +1,27 @@
+[
+  {
+    "key": "btn_CerezKabul",
+    "value": "onetrust-accept-btn-handler",
+    "type": "id"
+  },
+  {
+    "key": "input_SearchBar",
+    "value": "input[data-test-id='search-bar-input']",
+    "type": "css"
+  },
+  {
+    "key": "cards_Product",
+    "value": "article[class*='productCard-module_article']",
+    "type": "css"
+  },
+  {
+    "key": "btn_AddToCart_Icon_InCard",
+    "value": "svg[class*='addToCartStatus-module_spinnerIcon']",
+    "type": "css"
+  },
+  {
+    "key": "btn_Sepetim_Header",
+    "value": "a[href*='/sepetim']",
+    "type": "css"
+  }
+]

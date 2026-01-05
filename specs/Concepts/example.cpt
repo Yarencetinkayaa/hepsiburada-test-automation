@@ -1,0 +1,10 @@
+# HB-TC01 Akışı çalıştırılır
+* Hepsiburada ana sayfası açılır
+* Çerez bildirimi varsa kabul edilir
+* Search bar'a tıklanır
+* Search bar'da "bilgisayar" aranır
+* Ürün listesi satır satır değerlendirilir
+* Liste/grid view kontrolü yapılır
+* İkinci satırdaki ilk ürün bulunur
+* İkinci satırdaki ilk ürünün sepet ikonuna tıklanarak sepete eklenir
+
