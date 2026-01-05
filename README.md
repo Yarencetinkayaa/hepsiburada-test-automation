@@ -55,12 +55,14 @@ Liste ve grid görünüm kontrolleri
 Smoke test senaryoları
 
 PROJE YAPISI:
-
-├─ specs/                     → Gauge senaryoları (.spec)
-├─ src/test/java/             → Step ve core sınıflar
-├─ src/test/resources/
-│  ├─ data/                   → Test verileri (values.json)
-│  └─ element-infos/          → Locator dosyaları (allpage.json)
-├─ env/                       → Ortam konfigürasyonları
-├─ pom.xml
-└─ README.md
+hbtestotomasyonu/
+├─ src/
+│ └─ test/
+│ └─ java/
+│ ├─ steps/ → Gauge step implementation sınıfları
+│ ├─ pages/ → Page Object sınıfları
+│ └─ core/ → Driver, helper ve utility sınıfları
+├─ specs/ → Gauge test senaryoları (.spec)
+├─ pom.xml → Maven bağımlılıkları
+├─ README.md
+└─ .gitignore
