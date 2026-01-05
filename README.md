@@ -54,15 +54,3 @@ Sepete ürün ekleme
 Liste ve grid görünüm kontrolleri
 Smoke test senaryoları
 
-PROJE YAPISI:
-hbtestotomasyonu/
-├─ src/
-│ └─ test/
-│ └─ java/
-│ ├─ steps/ → Gauge step implementation sınıfları
-│ ├─ pages/ → Page Object sınıfları
-│ └─ core/ → Driver, helper ve utility sınıfları
-├─ specs/ → Gauge test senaryoları (.spec)
-├─ pom.xml → Maven bağımlılıkları
-├─ README.md
-└─ .gitignore
